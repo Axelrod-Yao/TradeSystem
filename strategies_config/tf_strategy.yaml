@@ -1,0 +1,15 @@
+CLASS: 'TrendFollow' # 必须和策略文件中的类名严格一致
+
+INTERVAL: '1min' #interval:策略（generate_signal函数）多久运行一次
+
+PARAMETERS: #策略中所需参数
+  # 交易参数
+  trade_num: 3  # 交易手数
+  trade_offset: 3  # 取买几卖几
+  
+  # 拐点检测参数 - 调整为更敏感的参数
+  window_size: 3  # 滑动窗口大小（分钟）- 从5改为3，更敏感
+  volume_threshold: 1.2  # 成交量阈值 - 从1.5改为1.2，降低要求
+  min_interval: 3  # 最小拐点间隔（分钟）- 从5改为3，更频繁
+
+WATCHLIST: ['jd2508', 'rb2510', 'ag2508', 'ao2509'] # 交易品种 
