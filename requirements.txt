@@ -1,0 +1,11 @@
+numpy
+pandas
+aiohttp
+requests
+pyyaml
+finta
+# 量化相关依赖
+# 你可能还需要：
+# pip install aiohttp_sse_client
+# pip install finta
+# pip install pyyaml 
