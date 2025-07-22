@@ -9,11 +9,11 @@ import psutil
 
 def run_strategy():
     """执行 run.py 脚本"""
-    python_exe = r"L:\Quantification\env\Scripts\python.exe"
-    script_path = r"L:\Quantification\LeopardSeek\run.py"
-    subprocess.Popen([python_exe, script_path], cwd=r"L:\Quantification\LeopardSeek")
-#  注意！在此处，将python环境路径和项目路径改为你项目的对应路径
-
+    import sys, os, subprocess
+    python_exe = sys.executable  # 当前环境的python路径
+    script_path = os.path.join(os.path.dirname(__file__), 'run.py')
+    subprocess.Popen([python_exe, script_path], cwd=os.path.dirname(__file__))
+    
 def wait_until_target(hour, minute=0):
     """等待直到目标时间"""
     while True:

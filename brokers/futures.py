@@ -254,6 +254,9 @@ class Futures(Broker):
         )
 
         return response
+    
+    def cancel_order(self, order_id):
+        return self.api.sse_client.cancel_order(order_id)
 
     def relog(self):
         self.api.sse_client.login(self.password)

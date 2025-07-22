@@ -5,7 +5,7 @@ INTERVAL: '1min' #interval:策略（generate_signal函数）多久运行一次
 PARAMETERS: #策略中所需参数
   # 交易参数
   trade_num: 3  # 交易手数
-  trade_offset: 3  # 取买几卖几
+  trade_offset: 2  # 取买几卖几
   
   # 拐点检测参数 - 调整为更敏感的参数
   window_size: 3  # 滑动窗口大小（分钟）- 从5改为3，更敏感
